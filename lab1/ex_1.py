@@ -41,5 +41,25 @@ def do_ex4():
     turtle.done()
 
 
+def do_ex5():
+    ''' Draw 10 squares inside each other'''
+    delta_x = -10
+    delta_y = -10
+    n = 4
+    side_length = 30
+    turtle.speed(1)
+    for i in range(10):
+        draw_figure(n, side_length)
+        turtle.setheading(0)
+        x, y = turtle.pos()
+        x += delta_x
+        y += delta_y
+        turtle.up()
+        turtle.setpos(x, y)
+        turtle.down()
+        side_length += 2*abs(delta_y)
+    turtle.done()
+
+
 if __name__ == '__main__':
-    do_ex4()
+    do_ex5()

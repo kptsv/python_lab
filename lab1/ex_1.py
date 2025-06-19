@@ -26,15 +26,18 @@ def do_ex3():
     turtle.forward(100)
 
 
-def do_ex4():
-    ''' Draw circle using turtle'''
-    side_length = 5
-    n = 100 # многоупольник с большим количеством сторон, приближается к окружности
+def draw_figure(n:int, length:int):
+    ''' Draw figure with n angles and side equals length'''
     angle_to_turn = 360 / n
     turtle.shape('turtle')
     for i in range(n):
-        turtle.forward(side_length)
+        turtle.forward(length)
         turtle.left(angle_to_turn)
+
+
+def do_ex4():
+    ''' Draw circle using turtle'''
+    draw_figure(n=100, length=5)
     turtle.done()
 
 

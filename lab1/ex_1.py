@@ -1,4 +1,5 @@
 import turtle
+import math
 
 def do_ex2():
     ''' This function draws a letter "S" using turtle '''
@@ -74,7 +75,24 @@ def do_ex6():
         turtle.back(leg_length)
         turtle.left(angle_to_turn)
     turtle.done()
+
+def do_ex7():
+    ''' Draw spiral of Archimedes'''
+    a = 2 # шаг спирали
+    steps = 8
+    angles = 2 * math.pi * steps
+    angle = 0
+    turtle.shape('turtle')
+    while angle <= angles:
+        length = a * angle / 2*math.pi
+        x = length * math.cos(angle)
+        y = length * math.sin(angle)
+        turtle.setpos(x, y)
+        angle += 0.05
+        
+    turtle.done()
+
     
         
 if __name__ == '__main__':
-    do_ex6()
+    do_ex7()

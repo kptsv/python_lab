@@ -61,5 +61,20 @@ def do_ex5():
     turtle.done()
 
 
+def do_ex6():
+    ''' Draw spider with n legs'''
+    n = 12
+    leg_length = 100
+    angle_to_turn = 360 / n
+    turtle.speed(1)
+    turtle.shape('turtle')
+    for i in range(n):
+        turtle.forward(leg_length)
+        turtle.stamp()
+        turtle.back(leg_length)
+        turtle.left(angle_to_turn)
+    turtle.done()
+    
+        
 if __name__ == '__main__':
-    do_ex5()
+    do_ex6()

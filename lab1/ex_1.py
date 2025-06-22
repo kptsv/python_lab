@@ -95,5 +95,21 @@ def do_ex7():
     turtle.done()
     
         
+def do_ex8():
+    ''' Draw square spiral'''    
+    angle = 90
+    n_squares = 10
+    side_length = 5
+    small_piece = 5
+    turtle.shape('turtle')    
+    for i in range(n_squares):
+        for j in range(4):
+            turtle.forward(side_length)
+            turtle.left(angle)
+            side_length += small_piece
+
+    turtle.done()    
+
+
 if __name__ == '__main__':
-    do_ex7()
+    do_ex8()

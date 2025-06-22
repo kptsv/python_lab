@@ -78,20 +78,21 @@ def do_ex6():
 
 def do_ex7():
     ''' Draw spiral of Archimedes'''
-    a = 2 # шаг спирали
-    steps = 8
-    angles = 2 * math.pi * steps
+    n_circle = 10
+    length = 0
+    length_speed = 0.1
     angle = 0
+    angle_speed = 0.05
     turtle.shape('turtle')
-    while angle <= angles:
-        length = a * angle / 2*math.pi
+    turtle.speed(3)
+    while angle <= n_circle*2*math.pi:
         x = length * math.cos(angle)
-        y = length * math.sin(angle)
+        y = length * math.sin(angle)        
         turtle.setpos(x, y)
-        angle += 0.05
+        length += length_speed
+        angle += angle_speed
         
     turtle.done()
-
     
         
 if __name__ == '__main__':

@@ -111,5 +111,37 @@ def do_ex8():
     turtle.done()    
 
 
+def draw_polygon(n_angles:int, radius_out_circle):
+    ''' Draw a polygon
+        n_angles - number of angles of the polygon
+        radius_out_circle - radius of the out circle of polygon
+    '''
+    if int(n_angles) <=2:
+        return "Error! Number of angles must be more than 2."    
+    angle = 180 * (n_angles - 2) / n_angles
+    angles = [180 - angle / 2] + [180 - angle]*(n_angles - 1)
+    side_length = 2 * radius_out_circle * math.sin(math.pi/n_angles)
+    for angle_to_turn in angles:
+        turtle.left(angle_to_turn)
+        turtle.forward(side_length)
+        
+    
+def do_ex9():
+    ''' Draw 10 right polygons inside each other'''
+    turtle.shape('turtle')
+    turtle.speed(1)
+    radius = 30
+    dr = 15
+    for n in range(3, 13):
+        draw_polygon(n, radius) 
+        turtle.setheading(0)
+        turtle.up()
+        turtle.forward(dr)
+        turtle.down()
+        radius += dr
+
+    turtle.done()
+        
+
 if __name__ == '__main__':
-    do_ex8()
+    do_ex9()

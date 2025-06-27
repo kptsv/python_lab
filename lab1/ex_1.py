@@ -141,7 +141,19 @@ def do_ex9():
         radius += dr
 
     turtle.done()
-        
+
+
+def do_ex10():
+    ''' Draw flower using circles'''
+    angles_count = 150
+    radius = 50
+    turtle.shape('turtle')
+    turtle.speed(0)
+    directions = [270, 90, 315, 135, 225, 45]
+    for direction in directions:        
+        turtle.setheading(direction)        
+        draw_polygon(angles_count, radius)
+    turtle.done()
 
 if __name__ == '__main__':
-    do_ex9()
+    do_ex10()

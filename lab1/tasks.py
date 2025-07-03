@@ -154,6 +154,3 @@ def do_ex10():
         turtle.setheading(direction)        
         draw_polygon(angles_count, radius)
     turtle.done()
-
-if __name__ == '__main__':
-    do_ex10()

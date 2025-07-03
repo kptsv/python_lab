@@ -125,6 +125,23 @@ def draw_polygon(n_angles:int, radius_out_circle):
         turtle.left(angle_to_turn)
         turtle.forward(side_length)
         
+
+def draw_cycle(radius_out_circle=50, n_angles=180, isLeft=True):
+    ''' Draw a cycle as a polygon with many angles
+        radius_out_circle - radius of the out circle of polygon
+    '''
+    if int(n_angles) <=2:
+        return "Error! Number of angles must be more than 2."    
+    angle = 180 * (n_angles - 2) / n_angles
+    angles = [180 - angle]*n_angles
+    side_length = 2 * radius_out_circle * math.sin(math.pi/n_angles)
+    for angle_to_turn in angles:
+        if isLeft:
+            turtle.left(angle_to_turn)
+        else:
+            turtle.right(angle_to_turn)
+        turtle.forward(side_length)
+
     
 def do_ex9():
     ''' Draw 10 right polygons inside each other'''
@@ -154,3 +171,16 @@ def do_ex10():
         turtle.setheading(direction)        
         draw_polygon(angles_count, radius)
     turtle.done()
+
+
+def do_ex11():
+    ''' Draw the butterfly using circles'''
+    n_cycles = 10
+    radiuses = range(30, 130, 10)
+    turtle.shape('turtle')
+    turtle.setheading(90)
+    for radius in radiuses:
+        draw_cycle(radius)
+        draw_cycle(radius, isLeft=False)
+    turtle.done()
+    

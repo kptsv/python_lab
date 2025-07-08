@@ -1,4 +1,4 @@
-from tasks import do_ex11
+from tasks import do_ex12
 
 if __name__ == '__main__':
-    do_ex11()
+    do_ex12()

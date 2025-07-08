@@ -184,3 +184,17 @@ def do_ex11():
         draw_cycle(radius, isLeft=False)
     turtle.done()
     
+    
+def draw_arc(radius_of_arc=50, isLeft=True):
+    ''' Draw an arc (half an cycle) 
+        param: radius_of_arc is a radius of arc
+        param: isLeft shows direction of drawing arc        
+    '''
+    pass
+    
+    
+def do_ex12():
+    ''' Draw a spring '''
+    pass
+    
+    

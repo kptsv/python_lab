@@ -196,5 +196,60 @@ def do_ex12():
 
     turtle.done()
 
+
+def do_ex13():
+    ''' Draw a Smile Figure '''
+    head_radius = 100
+    eye_radius = head_radius // 10
+    eye_y = 4 * head_radius // 3
+    eye_x = head_radius // 3
+    nose_x = 0
+    nose_y = eye_y - 2 * eye_radius
+    nose_length = 3 * eye_radius
+    mouth_radius = head_radius // 2
+    mouth_x = head_radius // 2
+    mouth_y = 2 * head_radius // 3
+    turtle.shape('turtle')  
+    turtle.speed(1)
+    # Make head
+    turtle.begin_fill()  
+    turtle.circle(head_radius)
+    turtle.fillcolor('yellow')
+    turtle.end_fill()
+    # Make eyes
+    turtle.up()
+    turtle.setpos(-eye_x, eye_y)
+    turtle.down()
+    turtle.begin_fill()
+    turtle.circle(eye_radius)
+    turtle.fillcolor('blue')
+    turtle.end_fill()
+    turtle.up()
+    turtle.setpos(eye_x, eye_y)
+    turtle.down()
+    turtle.begin_fill()
+    turtle.circle(eye_radius)
+    turtle.fillcolor('blue')
+    turtle.end_fill()
+    # Make nose
+    turtle.up()
+    turtle.setpos(nose_x, nose_y)
+    turtle.setheading(270)
+    turtle.pensize(7)
+    turtle.down()
+    turtle. forward(nose_length)    
+    # Make mouth
+    turtle.up()
+    turtle.setpos(mouth_x, mouth_y)
+    turtle.down()
+    turtle.pensize(8)
+    turtle.pencolor('red')
+    turtle.setheading(270)
+    turtle.circle(-mouth_radius, 180)    
+    
+    turtle.done()
+        
+
+
     
     
